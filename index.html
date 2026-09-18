@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mariage de Jean-Christophe & Charlotte</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #738687;
+            color: #FFFFFF;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .invitation-container {
+            max-width: 750px;
+            width: 100%;
+            text-align: center;
+            padding: 3.5rem 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background-color: rgba(255, 255, 255, 0.03);
+            margin: 2rem 0;
+        }
+        
+        .header .subtitle {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            opacity: 0.8;
+        }
+        
+        .couple-names {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.5rem;
+            font-weight: 300;
+            margin: 1.5rem 0;
+            letter-spacing: 0.05em;
+            line-height: 1.1;
+        }
+
+        .couple-names .ampersand {
+            display: block;
+            font-size: 2.2rem;
+            margin: 0.15rem 0;
+            opacity: 0.85;
+        }
+        
+        .date-badge {
+            font-size: 0.95rem;
+            letter-spacing: 0.2em;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .intro-text {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            max-width: 480px;
+            margin: 0 auto 3rem auto;
+            font-style: italic;
+            font-family: 'Cormorant Garamond', serif;
+            opacity: 0.95;
+        }
+        
+        .event-info {
+            display: flex;
+            justify-content: space-around;
+            gap: 2rem;
+            margin-bottom: 3.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 2.5rem 0;
+        }
+        
+        .info-block {
+            flex: 1;
+        }
+        
+        .info-block h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            margin-bottom: 0.75rem;
+            opacity: 0.8;
+        }
+        
+        .info-block p {
+            font-size: 1.1rem;
+            margin-bottom: 0.4rem;
+            font-weight: 400;
+        }
+        
+        .info-block .location {
+            font-size: 0.95rem;
+            opacity: 0.85;
+            font-weight: 300;
+        }
+        
+        @media (max-width: 600px) {
+            .event-info {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            .couple-names {
+                font-size: 2.8rem;
+            }
+            .invitation-container {
+                padding: 2rem 1rem;
+                border: none;
+            }
+        }
+    </style>
+</head>
+
+<body class="p-4 sm:p-8">
+
+    <main class="invitation-container">
+
+        <header class="header">
+            <span class="subtitle">Nous nous unissons</span>
+            <h1 class="couple-names">
+                Jean-Christophe
+                <span class="ampersand">&</span>
+                Charlotte
+            </h1>
+            <div class="date-badge">17 . 10 . 2026</div>
+        </header>
+
+        <section class="details">
+            <p class="intro-text">
+                C'est avec beaucoup de joie que nous vous invitons à célébrer notre mariage. Votre présence rendra cette journée inoubliable.
+            </p>
+
+            <div class="event-info">
+                <div class="info-block">
+                    <h2>Cérémonie</h2>
+                    <p>14h30</p>
+                    <p class="location">Mairie de Châtillon</p>
+                </div>
+
+                <div class="info-block">
+                    <h2>Réception</h2>
+                    <p>15h30</p>
+                    <p class="location">Le CAM<br>Montrouge</p>
+                </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem 2rem; margin-top: 0.5rem; margin-bottom: 2rem; max-width: 620px; margin-left: auto; margin-right: auto;">
+                <div style="display: flex; justify-content: center;">
+                    <a href="#whoswho" onclick="showNotification('Le Who\'s Who sera disponible prochainement.'); return false;" style="color: #FFFFFF; text-decoration: none; text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.7rem; opacity: 0.9; border-bottom: 1px solid rgba(255,255,255,0.5); padding-bottom: 0.15rem;">Who's Who</a>
+                </div>
+                <div style="display: flex; justify-content: center;">
+                    <a href="#tables" onclick="showNotification('Le plan des tables sera disponible prochainement.'); return false;" style="color: #FFFFFF; text-decoration: none; text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.7rem; opacity: 0.9; border-bottom: 1px solid rgba(255,255,255,0.5); padding-bottom: 0.15rem;">Tables</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        function showNotification(text) {
+            const msg = document.createElement('div');
+            msg.className = 'fixed bottom-5 left-1/2 -translate-x-1/2 bg-white text-[#738687] px-6 py-3 rounded shadow-lg text-sm tracking-wider uppercase transition-all duration-300 z-50';
+            msg.innerText = text;
+            document.body.appendChild(msg);
+            setTimeout(() => {
+                msg.style.opacity = '0';
+                setTimeout(() => msg.remove(), 300);
+            }, 3500);
+        }
+    </script>
+
+</body>
+
+</html>
